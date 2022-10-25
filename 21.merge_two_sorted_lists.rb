@@ -12,6 +12,7 @@ end
 # @param {ListNode} list1
 # @param {ListNode} list2
 # @return {ListNode}
+#
 # recursive approach
 # time: O(m + n) where m + n is the number of stacks calls for the recursive call
 # space: O(m + n) where m is the length of list1 and m is the lenght of list2
@@ -38,7 +39,8 @@ end
 # @param {ListNode} list1
 # @param {ListNode} list2
 # @return {ListNode}
-# non recursive approach
+#
+# iterative approach
 # time: O(m + n) where m + n is the number of stacks calls for the recursive call
 # space: O(1) since were are not adding adding functions onto the call stack
 def merge_two_lists(list1, list2)
