@@ -52,3 +52,18 @@ def running_sum(nums)
 
     return nums                             
 end
+
+# @param {Integer[]} nums
+# @return {Integer[]}
+#
+# recursive appraoch?
+# time:
+# space: 
+def running_sum(nums)   
+
+    for i in (1..nums.length - 1) do        
+        nums[i] += nums[i - 1]
+    end
+
+    return nums                             
+end
