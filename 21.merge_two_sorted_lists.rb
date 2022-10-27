@@ -15,7 +15,7 @@ end
 #
 # recursive approach
 # time: O(m + n) where m + n is the number of stacks calls for the recursive call
-# space: O(m + n) where m is the length of list1 and m is the lenght of list2
+# space: O(m + n) where m is the length of list1 and m is the length of list2
 def merge_two_lists(list1, list2)
     head  = ListNode.new()
 
@@ -67,7 +67,7 @@ end
 ##################################################################################
 # teaching section
 
-# time: O(n + m) list1 n in lenght and list2 is m in lenght so 
+# time: O(n + m) list1 n in length and list2 is m in length so 
 # space: O(n + m) list1 would make at most n call to the stack and list2 would make at most m call to the stack. O(n + m)
 # recursive 
 def merge_two_lists(list1, list2)
