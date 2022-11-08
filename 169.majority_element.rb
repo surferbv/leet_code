@@ -5,7 +5,7 @@
 
     hash approach
 
-    time: O(n) we first iterate through all the elemtns in nums. This takes n
+    time: O(n) we first iterate through all the elements in nums. This takes n
          time then, we iterate through all the keys in the hash looking for 
          the key with the largest value thus, O(n) + O(n) = O(2n) = O(n)
 
@@ -33,9 +33,9 @@ end
 
 =begin
 
-    need code approach
+    neet code approach
 
-    time: O(n) we first iterate through all the elemtns in nums. This takes n
+    time: O(n) we first iterate through all the elements in nums. This takes n
          time then, we iterate through all the keys in the hash looking for 
          the key with the largest value thus, O(n) + O(n) = O(2n) = O(n)
 
@@ -84,8 +84,7 @@ def majority_element(nums)
 
     nums.each do |n|
         result = n if count == 0
-        count += 1 if result == n
-        count -= 1 if result != n
+        result == n ? count += 1 : count -= 1
     end
 
     return result
