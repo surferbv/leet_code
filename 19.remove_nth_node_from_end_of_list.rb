@@ -13,9 +13,35 @@
 #
 =begin
 
+    time: O(n)
+        In the worst case we have to iterate over the whole array.
+
+    space: O(1)
+
+    note:
+        dummy node, two pointers l,r and offset n. 
+
 =end
 def remove_nth_from_end(head, n)
+    dummy       = ListNode.new(0, head)
+    l           = dummy
+    r           = head
 
+    # move r by n
+    n.times do
+        r = r.next 
+    end
+    
+    # shift the node
+    while r 
+        r = r.next
+        l = l.next
+    end
+
+    # delete the nth node
+    l.next = l.next.next
+
+    return dummy.next
 end
 
 =begin
