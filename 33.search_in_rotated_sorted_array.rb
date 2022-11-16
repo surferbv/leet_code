@@ -12,7 +12,9 @@
     space: O(1)
     
     note:
-        Need to redo this problem 
+        Need to redo this problem I understood the algorithm 
+        but drawing this out is a must if you want to do the reverse binary 
+        search approach. 
 
 =end
 def search(nums, target)
