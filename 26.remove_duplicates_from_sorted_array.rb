@@ -5,9 +5,30 @@
 # @return {Integer}
 #
 =begin
+
+    two pointer approach
+
+    time: O(n)
+        Even thought we have two pointers we still go throught 
+        the array n + n which is O(2n) = O(n).
+
+    space: O(1)
+
+    note:
+        Two pointers clever way in starting l and r at 1 and only setting l when nums[r] is different. Drawing this out will help!
+
 =end
 def remove_duplicates(nums)
+    l = 1                           # starting at 1 since 0 will not need to be swaped
+
+    for r in (1..nums.length - 1) do
+        if nums[r - 1] != nums[r]   # if the right finds a different number we move it to l
+            nums[l] = nums[r]
+            l += 1                
+        end
+    end
     
+    return l
 end
 
 
@@ -44,6 +65,10 @@ end
 
 
 =begin
+
+    note:
+        this was my first appraoch did not work
+
     Genearl Algorithm:
         Using two pointers iterate over the whole array.
         One will be called prev and curr. 
@@ -59,19 +84,14 @@ end
 
 =end
 def remove_duplicates(nums)
-    i = 0 # prev
+    i = 1 # prev
         
     for j in (1..nums.length - 1) do # curr
         if nums[i] == nums[j]
             next
         else # j is at a diff number skipping the first i we mark all elemnts between i + 1 and j as nil
+            nums[i] = nums[j]
             i += 1
-            while i < j # remember we don't want to delete the value that j is on because we haven't seen it before
-                nums[i] = nil
-                i += 1
-            end
-            # at this point i is just before j so we set i equal to j and repeat the process over
-            i = j
         end
     end
 
@@ -79,5 +99,5 @@ def remove_duplicates(nums)
     # eg [1,1,2] => [1,nil,2]
     # eg. [0,0,1,1,1,2,2,3,3,4] => [0,nil,1,nil,nil,2,nil,3,nil,4]
 
-    return j + 1
+    return i
 end
