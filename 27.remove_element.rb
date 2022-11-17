@@ -30,6 +30,9 @@ end
 
 
 =begin
+
+    note:
+        Does not work
 =end
 def remove_element(nums, val)
     i = 0
