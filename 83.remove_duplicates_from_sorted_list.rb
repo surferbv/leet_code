@@ -24,8 +24,7 @@
     space: O(1)
 
     note:
-        Try to draw this out thinking of using just checking current 
-        and current's next. 
+        Try to draw this out thinking of using just checking current and current's next. 
 
 =end
 

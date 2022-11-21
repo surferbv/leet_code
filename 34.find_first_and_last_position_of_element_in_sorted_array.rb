@@ -1,4 +1,5 @@
 # 34.find_first_and_last_position_of_element_in_sorted_array.rb
+# https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 # https://www.youtube.com/watch?v=4sQL7R5ySUU
 # @param {Integer[]} nums
 # @param {Integer} target
