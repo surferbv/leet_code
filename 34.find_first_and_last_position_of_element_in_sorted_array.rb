@@ -5,6 +5,18 @@
 # @return {Integer[]}
 #
 =begin
+
+    bias approach
+
+    time: O(logn)
+        Even thought we run through it twice 
+        we can drop the constant O(2logn) = O(logn)
+
+    space: O(1)
+
+    note:
+        Think if it as moving all the way to the left by moving the right towards the left to get the left bias
+        and moving all the way to the right by moving the left all the way to the right end. 
 =end
 def search_range(nums, target)
     left_idx    = binary_search(nums, target, true)
@@ -28,9 +40,7 @@ def binary_search(nums, target, left_bias)
             else
                 l = mid + 1
             end
-        end
-
-        if guess > target
+        elsif guess > target
             r = mid - 1
         else
             l = mid + 1
