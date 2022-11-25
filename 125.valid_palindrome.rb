@@ -3,11 +3,25 @@
 # https://www.youtube.com/watch?v=jJXJ16kPFWg
 # @param {String} s
 # @return {Boolean}
+#
+=begin
 
+    two pointer approach
+
+    time: O(n)
+        We only iterate throught the linked list once
+        since l and r meet at the middle.
+
+    space: O(1)
+
+    note:
+        Two pointer approach starting from the left and the right and moving toward the center incrementing l and r 
+
+=end
 def is_palindrome(s)
     l = 0 
     r = s.length - 1
-    s = s.split("")
+
     while l < r 
 
         while l < r && !alpha_num(s[l]) 
@@ -28,9 +42,11 @@ def is_palindrome(s)
 end
 
 def alpha_num(c)
-    return  ('A'.ord <= c.ord <= 'Z'.ord || 'a'.ord <= c.ord <= 'z'.ord || '0'.ord <= c.ord <= '9'.ord) 
+    return  c.ord.between?('A'.ord, 'Z'.ord) || \
+            c.ord.between?('a'.ord, 'z'.ord) || \
+            c.ord.between?('0'.ord, '9'.ord) 
 end
-
+ 
 
 
 
