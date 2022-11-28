@@ -14,7 +14,6 @@
 
     space: 
 
-
     note:
         Uses Binary search with crazy partitioning conditions. If you draw it out like Neet did it's helps.        
 
