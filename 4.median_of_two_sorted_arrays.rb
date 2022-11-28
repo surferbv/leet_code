@@ -47,12 +47,10 @@ def find_median_sorted_arrays(nums1, nums2)
             # odd check
             if total % 2 == 1
                 return [a_right, b_right].min * 1.0
-                break
             end
 
             # even check
             return ([a_left, b_left].max + [a_right, b_right].min) / 2.0
-            break
         
         # partition is not correct
         elsif a_left > b_right
