@@ -23,6 +23,9 @@
     space: O(n)
         We have to make n call to the stack since we are using recursion. 
 
+    note:
+        Understand that you need to pass a range or min and max of valid node values. What if you have a root is correct but the bottom most right child is not.
+
 =end
 def is_valid_bst(root)
 
