@@ -1,4 +1,4 @@
-# 557. reverse words in a string II
+# 557. reverse words in a string II (easy)
 # https://leetcode.com/problems/reverse-words-in-a-string-iii/
 # @param {String} s
 # @return {String}

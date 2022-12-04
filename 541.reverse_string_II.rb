@@ -1,4 +1,4 @@
-# 541. Reverse String II
+# 541. Reverse String II (easy)
 # https://leetcode.com/problems/reverse-string-ii/
 # @param {String} s
 # @param {Integer} k
