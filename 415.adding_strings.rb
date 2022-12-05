@@ -17,7 +17,7 @@
     space: O(max(n1,n2))
 
     note:
-        Really struggled, I  was trying to loop through this backwards. 
+        Really struggled, I  was trying to loop through this backwards. Trick break it up into parts know how to carry. 
 
 =end
 def add_strings(num1, num2)
