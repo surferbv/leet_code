@@ -1,4 +1,4 @@
-# 290. Word Pattern
+# 290. Word Pattern (easy)
 # https://leetcode.com/problems/word-pattern/
 # https://www.youtube.com/watch?v=W_akoecmCbM
 # @param {String} pattern

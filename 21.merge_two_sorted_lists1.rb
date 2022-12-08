@@ -1,4 +1,4 @@
-# 21.merge_two_sorted_lists1.rb
+# 21.merge_two_sorted_lists1.rb (medium)
 # https://leetcode.com/problems/merge-two-sorted-lists/
 # https://youtu.be/XIdigk956u0
 # Definition for singly-linked list.

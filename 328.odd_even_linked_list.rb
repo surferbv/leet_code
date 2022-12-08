@@ -1,4 +1,8 @@
-# 328. odd even linked list
+# 328. odd even linked list (medium)
+#
+# TIL:
+# Re-linking nodes is not adding to the space complexity. 
+#
 # https://leetcode.com/problems/odd-even-linked-list/description/
 # Definition for singly-linked list.
 # class ListNode
