@@ -1,5 +1,10 @@
 # 872 leaf similar tress (easy)
 # trees
+#
+# TIL:
+# Yield can be used to return intermediate values to the caller. 
+# DFS is DFS order does not matter in this case. 
+#
 # https://leetcode.com/problems/leaf-similar-trees/
 # Definition for a binary tree node.
 # class TreeNode
