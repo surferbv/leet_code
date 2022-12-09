@@ -1,4 +1,4 @@
-# 704. Binary Search
+# 704. Binary Search (easy)
 # https://leetcode.com/problems/binary-search/?envType=study-plan&id=binary-search-i
 # @param {Integer[]} nums
 # @param {Integer} target
