@@ -14,8 +14,7 @@
     space: O(1)
 
     note:
-        Use binary search and run through an example that is in the array and one example the element in not in the array
-    
+        Use binary search and return l by why? Why not r?
 =end
 def search_insert(nums, target)
     l, r = 0, nums.length - 1
@@ -34,10 +33,5 @@ def search_insert(nums, target)
         end
     end
 
-    if l > r 
-        return l
-    else # l < r
-        return r
-    end
-    
+    return l
 end
