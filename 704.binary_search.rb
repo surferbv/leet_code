@@ -1,5 +1,6 @@
 # 704. Binary Search (easy)
 # https://leetcode.com/problems/binary-search/?envType=study-plan&id=binary-search-i
+# https://www.youtube.com/watch?v=s4DPM8ct1pI
 # @param {Integer[]} nums
 # @param {Integer} target
 # @return {Integer}
