@@ -1,4 +1,8 @@
-# 35. Search Insert Position
+# 35. Search Insert Position (easy)
+#
+# TIL:
+# You can return l to return the the index of where the number should be if it was in the array.
+#
 # https://leetcode.com/problems/search-insert-position/?envType=study-plan&id=binary-search-i
 # https://www.youtube.com/watch?v=K-RYzDZkzCI
 # @param {Integer[]} nums
