@@ -12,7 +12,7 @@
     space: O(1)
 
     note:
-        Can you do this using BFS? I think so that would be the next approach. 
+        Can you do this using Binary search? I think so that would be the next approach. 
         Even with repeated values? hmmmm...
 
 =end
