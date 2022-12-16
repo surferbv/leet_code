@@ -2,6 +2,10 @@
 
     78. subsets (medium)
 
+    links:
+        https://leetcode.com/problems/subsets/submissions/860501179/
+        https://www.youtube.com/watch?v=REOH22Xwdkk
+
     approach:
         back tracking approach
 
