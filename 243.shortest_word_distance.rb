@@ -1,7 +1,7 @@
 =begin
 
     title:
-        243. Shortest Word Distance
+        243. Shortest Word Distance (easy)
 
     links:
         https://leetcode.com/problems/shortest-word-distance/
