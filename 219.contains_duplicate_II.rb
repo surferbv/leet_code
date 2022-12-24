@@ -1,5 +1,5 @@
 =begin
-    219. Contains Duplicate II
+    219. Contains Duplicate II (easy)
 
     links:
         https://leetcode.com/problems/contains-duplicate-ii/

@@ -1,6 +1,6 @@
 =begin
 
-    119. pascals triangle II
+    119. pascals triangle II (easy)
 
     links:
         https://leetcode.com/problems/pascals-triangle-ii/description/
