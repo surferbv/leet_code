@@ -1,21 +1,27 @@
 =begin
 
     title:
-        64. Minimum Path Sum
+        64. Minimum Path Sum (medium)
 
     links:
         https://leetcode.com/problems/minimum-path-sum/
         https://www.youtube.com/watch?v=pGMsrvt0fpk
 
-    approach:
+    approach: 
+        DP approach
 
-    time:
+    time: O(n*m)
+        Since we have to iterate over the whole grid. 
 
-    space:
+    space: O(n*m)   
+        Since we created a grid that stores the results.
 
     note:
+        This can also be sloved without calculating the whole matrix by 
+        using just one row. 
 
     til:
+        I need to do more of these problems :-|
 
     results:
         Runtime 124 ms Beats 52% Memory 212.7 MB Beats 12%
