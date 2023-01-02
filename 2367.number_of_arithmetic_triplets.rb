@@ -1,7 +1,7 @@
 =begin
 
     title:
-        2367. Number of Arithmetic Triplets
+        2367. Number of Arithmetic Triplets (easy)
 
     links:
         https://leetcode.com/problems/number-of-arithmetic-triplets/
