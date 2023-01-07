@@ -23,7 +23,8 @@
         We build two hashes each with k characters for 26 characters thus we way O(1)
 
     note:
-        Build to hashes then compare their occurrence. 
+        Build to hashes then compare their occurrence. Try eith two hashes, then one hash, and
+        then an array. 
 
     til:
         subtracting the characters from the ransom note 
