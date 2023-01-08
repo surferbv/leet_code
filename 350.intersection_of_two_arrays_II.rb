@@ -1,7 +1,7 @@
 =begin
 
     title:
-        350. Intersection of Two Arrays II
+        350. Intersection of Two Arrays II (easy)
 
     links:
         https://leetcode.com/problems/intersection-of-two-arrays-ii/description/
@@ -21,7 +21,7 @@
         Use a hash and instead of storing the result in a separate array
         we could have used the smaller array to store the result and return it. 
         We can also solve by sorting the input first. Last approach be to use
-        built in intersection. 
+        built in intersection. Could even do this with an array. 
 
     til:
 
