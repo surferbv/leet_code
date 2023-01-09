@@ -1,10 +1,11 @@
 =begin
 
     title:
-        1920. Build Array from Permutation
+        1920. Build Array from Permutation (easy)
 
     links:
         https://leetcode.com/problems/build-array-from-permutation/
+        https://leetcode.com/problems/build-array-from-permutation/solutions/1315926/python-o-n-time-o-1-space-w-full-explanation/
 
     approach:
         auxiliary array approach    
