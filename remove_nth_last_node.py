@@ -12,6 +12,12 @@ def remove_nth_last_node(head, n):
     for i in range(n):
         right = right.next
 
+    # if right pointer is None then the nth last node is the head node so we can remove the head node by
+    # changing the head pointer to the node after the head node
+    if not right:
+        head = head.next
+        return head
+
     # now move both pointers one step at a time until right reaches the lats node i.e. right.next is None
     while right.next:
         left = left.next
