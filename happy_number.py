@@ -6,6 +6,11 @@
 #    Essentially, set slow to the Sum of Squared Digits(Sum of Squard Digits(fast)).
 # 3. If fast converges to 1, return TRUE, otherwise return FALSE.
 
+# time complexity: O(logn)
+#                  Two cases arise:
+#                  1. If the number is less than three digits, then we perform three iterations of the algorithm
+#                  2. If the number is greater than three digits, then we perform logn iterations of the algorithm
+# space complexity: O(1)
 def is_happy_number(n):
     slow = n
     fast = sum_of_squared_digits(n)
