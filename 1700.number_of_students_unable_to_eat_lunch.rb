@@ -1,5 +1,6 @@
 # 1700.number_of_students_unable_to_eat_lunch.rb
 #
+# attempt: 1
 # approach: Queue and stack
 # time:
 #       O(n)
@@ -30,7 +31,9 @@ def count_students(students, sandwiches)
         return 0 if students.empty?
     end
 end
-
+##############################################################################################################
+# Helper functions
+# 
 # Actions
 def take_sandwich(students, sandwiches)
     dequeue(students)
@@ -68,6 +71,7 @@ def pop(array)
 end
 
 ##############################################################################################################
+# attempt: 2
 # @param {Integer[]} students
 # @param {Integer[]} sandwiches
 # @return {Integer}
