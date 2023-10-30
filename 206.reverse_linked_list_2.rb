@@ -101,7 +101,7 @@ end
 # @param {ListNode} head
 # @return {ListNode}
 def reverse_list(head)
-    def reverse(cur,prev)
+    def reverse(cur, prev)
         if cur.nil?
             return prev
         else
