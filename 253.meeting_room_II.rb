@@ -12,6 +12,10 @@
 #          notice that we did not use a =< because we want to account for the case where a meeting ends and another starts
 #          at the same time
 #       6. keep track of the max number of meetings
+#
+#       - Trying drawing this up and placing vertial lines for when a meeting is in session and when it ends
+#       - Notice that the number of vertical lines at any given time is the number of meetings in session
+#       - Notice that the max number of vertical lines is the max number of meetings in session
 # 
 # @param {Integer[][]} intervals
 # @return {Integer}
