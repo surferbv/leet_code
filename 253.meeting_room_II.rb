@@ -1,6 +1,7 @@
 # approach: two pointers
 # time: O(nlogn) where n is the length of the intervals array
 # space: O(n) we are using two arrays to store the start and end times
+# technique: two pointers and sorting
 # notes:
 #       The take away here is to
 #       1. use two pointers 
