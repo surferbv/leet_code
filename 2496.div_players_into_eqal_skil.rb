@@ -1,58 +1,52 @@
 # approach: 
-# time:
-# space:
+# time: O(nlogn + n) = O(nlogn) Since we have to sort and then iterate through the array
+# space: O(n) we are using the teams array to store the teams
 # technique:
+#           The idea is to realize that after sorting the skills array allows us to
+#           group the players by skill level since we need to match the weatest player with the strongest player 
+#           If you don't do this the there's no way to ensure that the teams skill will be evenly matched. 
+#           
+#           After this we group the players in groups of two since we are guaranteed that the number of players is even
+#           and then we can calculate the sum of the chemestry of each team with checks in mind. 
 # notes:
-#       The overall idea is to sort the array and then find the smallest difference between 
-#       the strongest player and the weakest player
-#       and then find the number of players that have the same skill level as the weakest player
-#       and then divide the number of players by the min_diff to get the number of teams
-#       and then we need to get the sum of the chemestry of all the teams
-#       and then we can return the sum of the chemestry
+#       Could not figure this out the tricks was that sorting the array allows us to group the players by skill level
+#       and determine if we can have even skill.
 # @param {Integer[]} skill
 # @return {Integer}
 def divide_players(skill)
 
-    # sort the array this will place the weakest player with the strongest player
-    skill.sort!
+    # sort the array nlogn
+    skill.sort! 
 
-    # we want to find the smallest difference between the strongest player and the weakest player
-    # we can do this by iterating through the array and comparing the current player to the next player
-    min_diff = Float::INFINITY
+    # find the min_diff
+    min_diff = skill.last - skill.first
 
-    (0...skill.length-1).each do |i|
-        min_diff = [min_diff, skill[i+1] - skill[i]].min
+    # group the players by skill level 
+    # this would be the strongest player and the weakest player
+    weakest = 0 
+    strongest = skill.length - 1
+    teams = []
+    skill_each_team = 0
+
+    while weakest < strongest
+        teams << [skill[weakest], skill[strongest]]
+        weakest += 1
+        strongest -= 1
     end
 
-    # now we want to find the number of players that have the same skill level as the weakest player
-    # we can do this by iterating through the array and comparing the current player to the weakest player
-    count = 0
+    # the skill of each team
+    skill_each_team = teams.first.first + teams.first.last
 
-    skill.each do |s|
-        count += 1 if s == skill.first
-    end
+    # if there's only one team then we return the sum of the chemestry
+    return teams.first.first * teams.first.last if teams.length == 1
 
-    # we can divide the number of players by the min_diff to get the number of teams
-    # we can use integer division to get the number of teams
-    # if the min_diff is 0 then we can just return the number of players
-    min_diff == 0 ? count : count / min_diff
+    # if the skill of each times do not match then we return -1
+    return -1 if teams.any? { |team| team.first + team.last != skill_each_team}
 
-    # if the min_diff is not 0 then we the skills of each team is not equal so return -1
-    # the skills of each team is equal so we return -1
-    return -1 if min_diff != 0
-
-    # we need to get the sum of the chemestry of all the teams
-    # we can do this by iterating through the array and adding the min_diff to the weakest player
-    # use two pointers to keep track of the weakest player and the strongest player to get the sum of the chemestry
+    # return the sum of the chemestry
     sum = 0
-    l = 0
-    r = skill.length - 1
+    teams.each { |team| sum += team.first * team.last }
 
-    while l < r
-        sum += skill[l] * skill[r] 
-        l += 1
-        r -= 1
-    end
-
-    sum 
+    # return the sum of the chemestry
+    sum
 end
