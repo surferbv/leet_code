@@ -10,6 +10,18 @@
 # end
 # @param {TreeNode} root
 # @return {TreeNode}
+#
+# notes:
+# almost try to think about a simple tree first and then add recusion. 
 def invert_tree(root)
+    return nil if root.nil?
 
+    tmp = root.left 
+    root.left = root.right
+    root.right = tmp
+
+    invert_tree(root.left)
+    invert_tree(root.right)
+
+    root
 end
