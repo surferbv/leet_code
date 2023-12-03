@@ -40,6 +40,41 @@
 # end
 # @param {ListNode} head
 # @return {Boolean}
+#
+# notes:
+# techniques:
+# - two pointer appraoch
+# - reverse linked list
+# - pointer manipulations and other stuff you need to be good 
+# - keep in mind that prev will be at the last node
 def is_palindrome(head)
-    
+    slow, fast = head, head
+
+    return head if head.nil?
+
+    # move slow to mid point of the list 
+    while fast && fast.next
+        slow = slow.next
+        fast = fast.next.next
+    end
+
+    # now we reverse the half of the linked list
+    prev = nil # prev will be at the last node
+    while slow 
+        temp = slow.next
+        slow.next = prev
+        prev = slow
+        slow = temp
+    end
+
+    # now that we have reversed half of the linked list we can do
+    # the left right pointer appraoch as we normally do with arrays
+    left, right = head, prev # get confused at this point draw it out!
+    while right
+        return false if left.val != right.val
+        left = left.next
+        right = right.next
+    end
+
+    true
 end

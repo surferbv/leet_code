@@ -32,5 +32,15 @@
 # @param {TreeNode} root
 # @return {TreeNode}
 def invert_tree(root)
-    
+
+    return nil if root.nil?
+
+    temp = root.left
+    root.left = root.right
+    root.right = temp
+
+    invert_tree(root.left) if root.left # don't really need this because which check for nil at the base case. 
+    invert_tree(root.right)
+
+    root 
 end
