@@ -59,6 +59,11 @@ end
 # appraoch: two pointers
 # time: O(n)
 # space: O(1)
+# notes:
+# the idea is to think about moving all the non zero values to the front of the array
+# i.e. partion the the array such that all non zeros are on the left and zeros are on the right
+# this appraoch is more efficient since it does not requrie extra space 
+# and does it with relative few operations. 
 # @param {Integer[]} nums
 # @return {Void} Do not return anything, modify nums in-place instead.
 def move_zeroes(nums)
