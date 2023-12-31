@@ -62,3 +62,21 @@ def max_length_between_equal_characters(s = "abca")
 
    result
 end
+
+# @param {String} s
+# @return {Integer}
+def max_length_between_equal_characters(s)
+  seen = {}
+  result = -1
+
+  s.each_char.with_index do |char, i|
+    if seen.key?(char)
+      result = [result, i - seen[char] - 1].max
+
+    else
+      seen[char] = i
+    end
+  end
+  
+  result
+end
