@@ -10,28 +10,64 @@
 #
 # @param {Integer[]} nums
 # @return {Integer}
+# TLE
 require 'set'
 def longest_consecutive(nums)
-  count = 0
+  longest = 0
   nums_set = Set.new(nums)
 
   nums.each do |n|
-    cur_count = 0
-
-    if nums_set.include?(n-1)
-     
-      next_n = n + 1
-      while nums_set.include?(next_n)
-        cur_count += 1
-        next_n += 1
+    length = 0
+    if !nums_set.include?(n - 1)
+      while nums_set.include?(n + length)
+        length += 1
       end
-      cur_count += 2
-    else
-      cur_count += 1
+      nums_set.delete(n)
+      longest = [longest, length].max
     end
-
-    count = [count, cur_count].max
   end
 
-  count
+  longest
+end
+
+require 'set'
+def longest_consecutive(nums)
+  longest = 0
+  nums_set = Set.new(nums)
+
+  nums.each do |n|
+    if !nums_set.include?(n - 1)
+      current_num = n
+      current_streak = 1
+
+      while nums_set.include?(current_num + 1) 
+        current_num += 1
+        current_streak += 1
+        nums_set.delete(current_num)
+      end
+
+      longest = [current_streak, longest].max
+    end
+  end
+
+  longest
+end
+
+def longest_consecutive(nums)
+ return 0 if nums.empty? 
+
+ nums = nums.sort!
+ longest_streak = current_streak = 1
+
+ (1).upto(nums.length - 1).each do |i|
+  if nums[i] == nums[i - 1] + 1
+    current_streak += 1
+  elsif nums[i] != nums[i - 1]
+    current_streak = 1
+  end
+
+  longest_streak = [longest_streak, current_streak].max
+ end
+
+ longest_streak
 end
